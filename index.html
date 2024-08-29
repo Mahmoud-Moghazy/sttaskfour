@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Advanced Blog</title>
+    <link rel="stylesheet" href="./css/all.min.css"> <!--  Font Awesome -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"> <!--  bootstrap -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- mine css -->
+  </head>
+
+  <body>
+    <!-- Start Header ------------------------------------------------------------------ -->
+    <header>
+    <!-- Start Navbar ------------------------------------------------------------------ -->
+      <nav class="navbar container-fluid navbar-expand-lg bg-dark">
+        <div class="container py-1 py-lg-3 d-lg-flex flex-lg-column gap-lg-3">
+          <a class="navbar-brand m-lg-0 text-white fs-1" href="#">My Advanced Blog</a>
+          <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white px-2 fs-5 active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-2 fs-5" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-2 fs-5" href="#">Contect</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-2 fs-5" href="#">Portfoilo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- End Navbar -------------------------------------------------------------------- -->
+    </header>
+    <!-- End Header -------------------------------------------------------------------- -->
+    <!-- Start Main -------------------------------------------------------------------- -->
+    <main class="container my-5">
+    <!-- Btn to show and hide sidebar at small screen ---------------------------------- -->
+      <button class="bg-dark p-2 m-2 ms-auto custom-btn d-md-none" id="sidebarToggle" aria-label="Open menu">
+        <i class="fa-solid fa-angles-left text-white fs-6"></i>
+      </button>
+    <!-- Btn to show and hide sidebar at small screen ---------------------------------- -->
+    <!-- Start Main Section ------------------------------------------------------------ -->
+      <section class="row gap-md-5 position-relative">
+    <!-- Start Article ------------------------------------------------------------------ -->
+        <article class="col-md-7">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title text-dark">First Advanced Article Title</h2>
+              <p class="card-text text-black-50">This is some sample text for the first article. The full content of the article could be displayed here. Feel free to add more content and style it as needed.</p>
+              <a href="#" class="btn btn-dark">Read More</a>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title text-dark">Second Advanced Article Title</h2>
+              <p class="card-text text-black-50">This is some sample text for the second article. The full content of the article could be displayed here. Experiment with different layouts and design enhancements.</p>
+              <a href="#" class="btn btn-dark">Read More</a>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title text-dark">Third Advanced Article Title</h2>
+              <p class="card-text text-black-50">This is some sample text for the third article. Challenge yourself to add more features and make the blog more interactive and user-friendly.</p>
+              <a href="#" class="btn btn-dark">Read More</a>
+            </div>
+          </div>
+        </article>
+    <!-- End Article -------------------------------------------------------------------- -->
+    <!-- Start Aside -------------------------------------------------------------------- -->
+        <aside class="sidebar rounded-3 col-md-4 p-3 bg-dark">
+          <div class="row row-cols-1 gap-2">
+            <div class="col">
+              <div class="card bg-transparent shadow-lg">
+                <div class="card-body text-light">
+                  <h3>About the Blog</h3>
+                  <p>This blog is more advanced, requiring enhancements and restructuring. Consider adding more sections and making it dynamic with JavaScript.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-transparent shadow-lg">
+                <div class="card-body text-light">
+                  <h3>Useful Links</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="nav-link text-white-50">Home</a></li>
+                    <li><a href="#" class="nav-link text-white-50">About the Author</a></li>
+                    <li><a href="#" class="nav-link text-white-50">Contact Us</a></li>
+                    <li><a href="#" class="nav-link text-white-50">Portfolio</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-transparent shadow-lg">
+                <div class="card-body text-light">
+                  <h3>Recent Posts</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="nav-link text-white-50">How to Improve Your Blog</a></li>
+                    <li><a href="#" class="nav-link text-white-50">Understanding CSS Grid</a></li>
+                    <li><a href="#" class="nav-link text-white-50">10 JavaScript Tips and Tricks</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+    <!-- End Aside ---------------------------------------------------------------------- -->
+      </section>
+    <!-- End Main Section -------------------------------------------------------------- -->
+    </main>
+    <!-- End Main ---------------------------------------------------------------------- -->
+    <!-- Start Footer Section ---------------------------------------------------------- -->
+    <footer class="bg-dark py-5">
+      <div class="container text-white text-center py-5">
+        <p>All Rights Reserved © 2024 | Designed by Mahmoud Mohamed Abdel Hamid</p>
+        <form class="d-flex justify-content-center">
+          <input type="email" class="form-control me-2" placeholder="Enter your email">
+          <button type="submit" class="btn btn-dark border border-dark-subtle">Subscribe</button>
+        </form>
+      </div>
+    </footer>
+    <!-- End Footer Section ------------------------------------------------------------ -->
+
+    <!-- Back to Top Button -->
+      <button id="back-to-top" class="btn btn-info rounded-circle">
+        <i class="fa-solid fa-angles-up slider"></i>
+      </button>
+
+    <script src="./js/bootstrap.bundle.min.js"></script> <!--  bootstrap -->
+    <script src="./js/script.js"></script> <!--  mine javascript -->
+  </body>
+
+</html>

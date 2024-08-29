@@ -1,0 +1,145 @@
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #e7ebf0;
+  --text-color: #666;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--secondary-color);
+}
+
+a {
+  cursor: pointer;
+}
+/* give a position for under line can display */
+header {
+  position: relative;
+}
+
+/* the line under header */
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: white;
+}
+
+/* show underline when make hover on any anchor with nav-link class */
+a.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* sidebar btn to show and hide at XS SM screens */
+.custom-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hide sidebar at small screen */
+.sidebar {
+  position: absolute;
+  opacity: 0;
+  animation: slied-out 0.5s ease-in-out;
+  -webkit-animation: slied-out 0.5s ease-in-out;
+}
+/* show sidebar at small screen when show btn clicked*/
+.show-sidebar {
+  position: absolute;
+  opacity: 1;
+  animation: slied-in 0.5s ease-in-out;
+  -webkit-animation: slied-in 0.5s ease-in-out;
+}
+
+/* Keyframes for the sidebar movement */
+@keyframes slied-in {
+  0% {
+    left: 100%;
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes slied-out {
+  0% {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+/* Cards */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
+.slider {
+  animation: slied-up-down 1.5s ease-in-out infinite;
+  -webkit-animation: slied-up-down 1.5s ease-in-out infinite;
+}
+
+@keyframes slied-up-down {
+  0% {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+}
+  100% {
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+}
+}
+
+/*? Responsive Based on Breakpoints Styles --------------------------------------------------- */
+
+@media (min-width: 767px) {
+  .sidebar {
+    position: static;
+    opacity: 1;
+    animation: none;
+    -webkit-animation: none;
+    height: fit-content;
+  }
+}
